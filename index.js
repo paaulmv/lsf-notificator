@@ -23,7 +23,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 require('dotenv').config();
 
-console.log(process.env.USER, process.env.PASSWORD);
+console.log(process.env.USERNAME, process.env.PASSWORD);
 
 const examResults = [];
 
@@ -36,7 +36,7 @@ async function getToken() {
                 Referer: 'https://lsf.hft-stuttgart.de/qisserver/rds?state=user&type=0'
             },
             form: {
-                asdf: process.env.USER,
+                asdf: process.env.USERNAME,
                 fdsa: process.env.PASSWORD,
                 submit: 'Anmelden'
             },
