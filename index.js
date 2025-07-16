@@ -99,7 +99,7 @@ async function getExamResults(asi) {
                     console.log('New Result:', prüfungsNr, semester, moduleName, grade);
 
                     examResults.push({ prüfungsNr, moduleName, semester, grade });
-                    sendTelegramMessage(`Neue Note eingetragen: ${moduleName}: ${grade}`);
+                    sendTelegramMessage(`Neue Note eingetragen: ${moduleName}`);
                 }
             }
         });
