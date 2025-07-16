@@ -23,6 +23,8 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 require('dotenv').config();
 
+console.log(process.env.USER, process.env.PASSWORD);
+
 const examResults = [];
 
 async function getToken() {
