@@ -42,6 +42,9 @@ async function getToken() {
             followAllRedirects: true
         });
         console.log(response.statusCode, response.headers);
+
+        fs.writeFileSync('loginPage.html', response.body);
+        console.log('Login page saved to loginPage.html');
     } catch (error) {
         console.error('Error during request:', error.message);
     }
