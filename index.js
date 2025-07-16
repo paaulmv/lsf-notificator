@@ -79,8 +79,8 @@ async function getExamResults(asi) {
         });
         console.log(response.statusCode, response.headers);
 
-        // fs.writeFileSync('examResults.html', response.body);
-        // console.log('Exam results saved to examResults.html');
+        fs.writeFileSync('examResults.html', response.body);
+        console.log('Exam results saved to examResults.html');
 
         const $ = cheerio.load(response.body);
         $('table tr').each((index, element) => {
